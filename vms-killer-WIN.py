@@ -10,7 +10,7 @@ def killServer(VMS, VMSSERV):
             exit(1)
         elif proc.name() == VMSSERV or proc.name() == 'vms_crash_handler_x64.exe' or proc.name() == 'Watcher.exe':
             proc.terminate()
-            print('TS VMS Server and components were killed')
+            print(proc.name(), 'was killed')
     print('Done!')
 
 killServer(VMS, VMSSERV)
